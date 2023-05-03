@@ -1,4 +1,5 @@
 import Mainmenu from './components/mainmenu.js';
+import './scss/app.scss';
 
 function App() {
   return (
