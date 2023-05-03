@@ -1,6 +1,15 @@
+import '../scss/menu.scss'
+
 const Mainmenu = () => {
     return(
-        <div>coucou</div>
+
+        <ul>
+
+            <li className="mm-btn">Arcade mode</li>
+            <li className="mm-btn">Versus mode</li>
+
+        </ul>
+        
     );
 }
 
