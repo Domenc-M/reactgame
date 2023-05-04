@@ -2,14 +2,14 @@ ul {
     list-style:none;
     display:flex;
     flex-direction:column;
-    justify-content:space-evenly;
-    align-items:space-evenly;
+    justify-content:space-around;
+    align-items:space-around;
     height:100vh;
     background-color:var(--dark);
     margin:0;
     padding:0;
 
-    li {
+    .mm-btn {
         background-color:var(--main-saturated);
         border: 2px solid var(--light);
         color: var(--light);
@@ -18,5 +18,11 @@ ul {
         font-size:4rem;
         width:80%;
         margin:auto;
+
+        &:hover {
+            color: var(--accent-light);
+            cursor:pointer;
+            border: 2px solid var(--accent-regular);
+        }
     }
 }
