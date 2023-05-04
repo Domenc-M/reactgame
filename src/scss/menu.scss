@@ -1,6 +1,22 @@
 ul {
     list-style:none;
-    li {
+    display:flex;
+    flex-direction:column;
+    justify-content:space-evenly;
+    align-items:space-evenly;
+    height:100vh;
+    background-color:var(--dark);
+    margin:0;
+    padding:0;
 
+    li {
+        background-color:var(--main-saturated);
+        border: 2px solid var(--light);
+        color: var(--light);
+        margin:10px;
+        text-align:center;
+        font-size:4rem;
+        width:80%;
+        margin:auto;
     }
 }
