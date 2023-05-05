@@ -1,12 +1,13 @@
 import '../scss/menu.scss'
 
-const Mainmenu = () => {
+const Mainmenu = (props) => {
+
     return(
 
         <ul>
 
-            <li className="mm-btn">Arcade mode</li>
-            <li className="mm-btn">Versus mode</li>
+            <li className="mm-btn" onClick={props.singleplayer}>Arcade mode</li>
+            <li className="mm-btn" onClick={props.versusmode}>Versus mode</li>
 
         </ul>
         
