@@ -4,14 +4,11 @@ const Characterselect = (props) => {
         'reimu',
         'madeline'
     ];
-    console.log(characterList);
-    characterList.forEach(element => {
-    console.log(element);
-    });
-
     return(
         <ul>
-            coucoux2
+            {characterList.map( i => (
+                <li key={i}>{i}</li>
+                ))}
         </ul>
     )
 }
