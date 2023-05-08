@@ -1,13 +1,19 @@
+import Reimu from '../characters/reimu';
+import Madeline from '../characters/madeline';
+
 const Characterselect = (props) => {
 
     const characterList = [
-        'reimu',
-        'madeline'
+        Reimu,
+        Madeline
     ];
+
+    console.log(characterList);
+
     return(
         <ul>
             {characterList.map( i => (
-                <li key={i}>{i}</li>
+                <li key={i}>{i.name}</li>
                 ))}
         </ul>
     )
