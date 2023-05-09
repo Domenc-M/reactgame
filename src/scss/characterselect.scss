@@ -1,0 +1,35 @@
+.cs-l {
+
+    .cs-btn {
+        height:150px;
+        width:150px;
+        overflow:hidden;
+        position:relative;
+
+        &:hover {
+            cursor:pointer;
+            .cs-name{
+                color:var(--accent-light);
+                border:1px solid var(--accent-light);
+            }
+        }
+
+        img{
+            object-fit:cover;
+            height:100%;
+            width:100%;
+        }
+
+        .cs-name{
+            background-color:var(--dark);
+            color:var(--light);
+            box-sizing:border-box;
+            border:1px solid var(--light);
+            position:absolute;
+            bottom:0px;
+            width:100%;
+            text-align:center;
+        }
+
+    }
+}

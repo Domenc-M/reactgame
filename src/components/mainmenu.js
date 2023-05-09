@@ -1,4 +1,4 @@
-import '../scss/menu.scss'
+import '../scss/mainmenu.scss'
 
 const Mainmenu = (props) => {
 
