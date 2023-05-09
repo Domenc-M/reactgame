@@ -8,12 +8,14 @@ const Characterselect = (props) => {
         Madeline
     ];
 
-    console.log(characterList);
-
     return(
-        <ul>
+        <ul className="cs-l">
             {characterList.map( i => (
-                <li key={i}>{i.name}</li>
+                <li className="cs-btn" key={i.name}>{i.name}
+
+                <img src={i.selectImage} alt={i.name}/>
+                
+                </li>
                 ))}
         </ul>
     )
