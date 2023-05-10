@@ -1,15 +1,21 @@
 import Reimu from '../characters/reimu';
 import Madeline from '../characters/madeline';
 import '../scss/characterselect.scss';
+import React from 'react';
 
-const Characterselect = (props) => {
+class Characterselect extends React.Component {
 
-    const characterList = [
-        Reimu,
-        Madeline
-    ];
+    selectChar = (element) => {
+        console.log(element.currentTarget.getAttribute('data'));
+    }
 
-    return(
+    render(){
+        const characterList = [
+            Reimu,
+            Madeline
+        ];
+
+        return(
         <div>
             <section className="cs-display">
 
@@ -22,7 +28,7 @@ const Characterselect = (props) => {
             </section>
             <ul className="cs-l">
                 {characterList.map( i => (
-                    <li className="cs-btn" key={i.name}>
+                    <li data={i.devName} onClick={this.selectChar} className="cs-btn" key={i.name}>
 
                     <img src={i.selectImage} alt={i.name}/>
                     <div className="cs-name">{i.name}</div>
@@ -31,7 +37,7 @@ const Characterselect = (props) => {
                     ))}
             </ul>
         </div>
-    )
+    )}
 }
 
 export default Characterselect;
