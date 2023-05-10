@@ -4,7 +4,7 @@
 // Vampire Survivor
 
 import Character from './Character.js'
-const abilities = ['1', '2'];
+const abilities = ['Ying-Yang Orb', 'Ofuda of sealing', 'Fantasy Seal', 'Fantasy Nature'];
 
 const Reimu = new Character("Reimu Hakurei", "reimu", abilities);
 

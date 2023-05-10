@@ -1,5 +1,5 @@
 import Character from './Character.js'
-const abilities = ['1', '2'];
+const abilities = ['Airdash', '"Think of a feather"', 'Badeline Switch', 'Strawberry Pie'];
 
 const Madeline = new Character("Madeline", "madeline", abilities);
 

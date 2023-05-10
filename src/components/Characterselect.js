@@ -10,16 +10,27 @@ const Characterselect = (props) => {
     ];
 
     return(
-        <ul className="cs-l">
-            {characterList.map( i => (
-                <li className="cs-btn" key={i.name}>
+        <div>
+            <section className="cs-display">
 
-                <img src={i.selectImage} alt={i.name}/>
-                <div className="cs-name">{i.name}</div>
-    
-                </li>
-                ))}
-        </ul>
+                <div></div>
+
+                <div></div>
+
+                <div></div>
+
+            </section>
+            <ul className="cs-l">
+                {characterList.map( i => (
+                    <li className="cs-btn" key={i.name}>
+
+                    <img src={i.selectImage} alt={i.name}/>
+                    <div className="cs-name">{i.name}</div>
+
+                    </li>
+                    ))}
+            </ul>
+        </div>
     )
 }
 
