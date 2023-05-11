@@ -2,6 +2,7 @@ import Reimu from '../characters/reimu';
 import Madeline from '../characters/madeline';
 import '../scss/characterselect.scss';
 import React from 'react';
+import vs from '../assets/img/vs.png';
 
 class Characterselect extends React.Component {
 
@@ -19,11 +20,17 @@ class Characterselect extends React.Component {
         <div>
             <section className="cs-display">
 
-                <div></div>
+                <div className="splashContainer">
+                    <img alt="1st player"></img>
+                </div>
 
-                <div></div>
+                <div className="vsContainer">
+                    <img src={vs} alt="vs"></img>
+                </div>
 
-                <div></div>
+                <div className="splashContainer">
+                    <img alt="2bd player"></img>
+                </div>
 
             </section>
             <ul className="cs-l">

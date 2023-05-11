@@ -1,7 +1,23 @@
-
+img{
+    object-fit:cover;
+    height:100%;
+    width:100%;
+}
 
 .cs-display {
     height:50vh;
+    display:flex;
+    flex-direction:row;
+
+    .vsContainer{
+        height:100%;
+        width:33%;
+    }
+
+    .splashContainer{
+        height:100%;
+        width:33%;
+    }
 }
 
 .cs-l {
@@ -26,12 +42,6 @@
                 color:var(--accent-light);
                 border:1px solid var(--accent-light);
             }
-        }
-
-        img{
-            object-fit:cover;
-            height:100%;
-            width:100%;
         }
 
         .cs-name{
