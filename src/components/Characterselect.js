@@ -11,6 +11,10 @@ class Characterselect extends React.Component {
           player1: null,
           player2: null,    
         };
+        this.characterList = [
+            reimu,
+            madeline
+        ];
     }
 
     selectChar = (element) => {
@@ -23,19 +27,18 @@ class Characterselect extends React.Component {
 
         let output;
 
-        console.log('the input :', this.state.player1);
-        console.log('my try : ', this.state.player1);
-        console.log('What I want :', reimu);
-
-        if(this.state.player1 == null)
+        if(this.state.player1 === null)
         {
             output = <div>coucou</div>
         }
         else
         {
+            let result = this.characterList.filter(obj => {
+                return obj.devName === this.state.player1;
+              })
             output = <div>
                 {this.state.player1}
-                <img alt="1st player" src={[this.state.player1].selectImage}></img>
+                <img alt="1st player" src={result[0].selectImage}></img>
                 </div>;
         }
 
@@ -43,10 +46,7 @@ class Characterselect extends React.Component {
     }
 
     render(){
-        const characterList = [
-            reimu,
-            madeline
-        ];
+
 
         return(
         <div>
@@ -66,7 +66,7 @@ class Characterselect extends React.Component {
 
             </section>
             <ul className="cs-l">
-                {characterList.map( i => (
+                {this.characterList.map( i => (
                     <li data={i.devName} onMouseEnter={this.selectChar} className="cs-btn" key={i.name}>
 
                     <img src={i.selectImage} alt={i.name}/>
