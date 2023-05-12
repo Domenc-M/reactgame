@@ -6,6 +6,6 @@
 import Character from './Character.js'
 const abilities = ['Ying-Yang Orb', 'Ofuda of sealing', 'Fantasy Seal', 'Fantasy Nature'];
 
-const Reimu = new Character("Reimu Hakurei", "reimu", abilities);
+const reimu = new Character("Reimu Hakurei", "reimu", abilities);
 
-export default Reimu;
+export default reimu;

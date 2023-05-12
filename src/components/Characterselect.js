@@ -24,7 +24,7 @@ class Characterselect extends React.Component {
         let output;
 
         console.log('the input :', this.state.player1);
-        console.log('my try : ', window[this.state.player1]);
+        console.log('my try : ', this.state.player1);
         console.log('What I want :', reimu);
 
         if(this.state.player1 == null)
