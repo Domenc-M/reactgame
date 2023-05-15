@@ -5,18 +5,34 @@ img{
 }
 
 .cs-display {
-    height:50vh;
+    height:60vh;
     display:flex;
     flex-direction:row;
 
     .vsContainer{
         height:100%;
         width:33%;
+
+        img{
+            object-fit:contain;
+        }
     }
 
     .splashContainer{
         height:100%;
         width:33%;
+        position:relative;
+
+        .playerSplash{
+            ul{
+                position:absolute;
+                height:100%;
+
+                li{
+                    color:var(--white);
+                }
+            }
+        }
     }
 }
 
