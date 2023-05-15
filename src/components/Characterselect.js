@@ -36,9 +36,19 @@ class Characterselect extends React.Component {
             let result = this.characterList.filter(obj => {
                 return obj.devName === this.state.player1;
               })
-            output = <div>
-                {this.state.player1}
-                <img alt="1st player" src={result[0].selectImage}></img>
+
+            result = result[0];
+            console.log(result);
+            output = <div className="playerSplash">
+                <ul>
+                    <li>{result.name}</li>
+                    <li>{result.description}</li>
+                    <li>{result.abilityList[0]}</li>
+                    <li>{result.abilityList[1]}</li>
+                    <li>{result.abilityList[2]}</li>
+                    <li>{result.abilityList[3]}</li>
+                </ul>
+                <img alt="1st player" src={result.selectImage}></img>
                 </div>;
         }
 
