@@ -1,5 +1,6 @@
 import reimu from '../characters/reimu';
 import madeline from '../characters/madeline';
+import laharl from '../characters/laharl';
 import '../scss/characterselect.scss';
 import React from 'react';
 import vs from '../assets/img/vs.png';
