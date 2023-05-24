@@ -11,7 +11,7 @@ img{
 
     .vsContainer{
         height:100%;
-        width:33%;
+        width:20%;
 
         img{
             object-fit:contain;
@@ -20,13 +20,24 @@ img{
 
     .splashContainer{
         height:100%;
-        width:33%;
+        width:40%;
         position:relative;
 
         .playerSplash{
-            ul{
-                position:absolute;
+            img{
+                object-fit:contain;
                 height:100%;
+                position:absolute;
+                z-index:1;
+                left:-25%;
+            }
+            ul{
+                z-index:2;
+                position:absolute;
+                right:0;
+                height:90%;
+                width:50%;
+                background-color:var(--main);
 
                 li{
                     color:var(--white);

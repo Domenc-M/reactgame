@@ -45,10 +45,13 @@ class Characterselect extends React.Component {
                 <ul>
                     <li>{result.name}</li>
                     <li>{result.description}</li>
-                    <li>{result.abilityList[0]}</li>
-                    <li>{result.abilityList[1]}</li>
-                    <li>{result.abilityList[2]}</li>
-                    <li>{result.abilityList[3]}</li>
+                    <li>
+                        <p>Abilities :</p>
+                        <p>-{result.abilityList[0]}</p>
+                        <p>-{result.abilityList[1]}</p>
+                        <p>-{result.abilityList[2]}</p>
+                        <p>-{result.abilityList[3]}</p>
+                    </li>
                 </ul>
                 <img alt="1st player" src={result.splashImage}></img>
                 </div>;
