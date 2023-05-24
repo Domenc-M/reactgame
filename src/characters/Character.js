@@ -5,6 +5,7 @@ class Character {
         this.abilityList = abilityList;
         this.description = description;
         this.selectImage = require("../assets/img/" + devName + "/" + devName + "select.png");
+        this.splashImage = require("../assets/img/" + devName + "/" + devName + "splash.png");
     }
 }
 

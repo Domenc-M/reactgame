@@ -14,7 +14,8 @@ class Characterselect extends React.Component {
         };
         this.characterList = [
             reimu,
-            madeline
+            madeline,
+            laharl
         ];
     }
 
@@ -49,7 +50,7 @@ class Characterselect extends React.Component {
                     <li>{result.abilityList[2]}</li>
                     <li>{result.abilityList[3]}</li>
                 </ul>
-                <img alt="1st player" src={result.selectImage}></img>
+                <img alt="1st player" src={result.splashImage}></img>
                 </div>;
         }
 
