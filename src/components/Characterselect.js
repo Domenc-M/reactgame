@@ -43,9 +43,9 @@ class Characterselect extends React.Component {
             console.log(result);
             output = <div className="playerSplash">
                 <ul>
-                    <li>{result.name}</li>
-                    <li>{result.description}</li>
-                    <li>
+                    <li className="charName">{result.name}</li>
+                    <li className="charDesc">{result.description}</li>
+                    <li className="charAbilities">
                         <p>Abilities :</p>
                         <p>-{result.abilityList[0]}</p>
                         <p>-{result.abilityList[1]}</p>

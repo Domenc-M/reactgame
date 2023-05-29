@@ -37,10 +37,17 @@ img{
                 right:0;
                 height:90%;
                 width:50%;
-                background-color:var(--main);
 
-                li{
-                    color:var(--white);
+                .charName{
+                    font-size:3rem;
+                    color:var(--accent-light);
+                    text-align:center;
+                }
+
+                .charAbilities, .charDesc{
+                    color:var(--light);
+                    background-color:var(--main);
+                    border:2px solid var(--light);
                 }
             }
         }
