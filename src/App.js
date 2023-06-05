@@ -8,7 +8,9 @@ class App extends React.Component {
     super(props);
     this.state = {
       screen: 'mainmenu',
-      opponent: 'ai'
+      opponent: 'ai',
+      player1: null,
+      player2: null
     }
   };
 

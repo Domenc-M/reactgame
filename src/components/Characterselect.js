@@ -19,10 +19,14 @@ class Characterselect extends React.Component {
         ];
     }
 
-    selectChar = (element) => {
+    hoverChar = (element) => {
         this.setState({
             player1: element.currentTarget.getAttribute('data')
         });
+    }
+
+    selectChar = (element) => {
+        console.log(element);
     }
 
     leftSplash = (element) => {
@@ -40,7 +44,6 @@ class Characterselect extends React.Component {
               })
 
             result = result[0];
-            console.log(result);
             output = <div className="playerSplash">
                 <ul>
                     <li className="charName">{result.name}</li>
@@ -82,7 +85,7 @@ class Characterselect extends React.Component {
             </section>
             <ul className="cs-l">
                 {this.characterList.map( i => (
-                    <li data={i.devName} onMouseEnter={this.selectChar} className="cs-btn" key={i.name}>
+                    <li data={i.devName} onClick={this.selectChar} onMouseEnter={this.hoverChar} className="cs-btn" key={i.name}>
 
                     <img src={i.selectImage} alt={i.name}/>
                     <div className="cs-name">{i.name}</div>
