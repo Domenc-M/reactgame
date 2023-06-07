@@ -1,5 +1,5 @@
 import Mainmenu from './components/mainmenu.js';
-import Characterselect from './components/Characterselect.js';
+import Characterselect from './components/Characterselect';
 import './scss/app.scss';
 import React from 'react';
 
