@@ -22,14 +22,20 @@ class Characterselect extends React.Component {
     }
 
     hoverChar = (element) => {
-        this.setState({
-            player1: element.currentTarget.getAttribute('data')
-        });
+        if(this.state.player1 == null)
+        {
+            this.setState({
+                leftDisplay: element.currentTarget.getAttribute('data')
+            });
+        }
     }
 
     selectChar = (element) => {
         console.log(element);
-        if(this.props.opponnent == "ai")
+        this.setState({
+            player1: element.currentTarget.getAttribute('data')
+        });
+        if(this.props.opponent === "ai")
         {
             console.log("no opponnent needed yet");
         }
@@ -38,16 +44,17 @@ class Characterselect extends React.Component {
 
     leftSplash = (element) => {
 
+        let source;
         let output;
 
-        if(this.state.player1 === null)
+        if(this.state.leftDisplay == null)
         {
             output = <div></div>
         }
         else
         {
             let result = this.characterList.filter(obj => {
-                return obj.devName === this.state.player1;
+                return obj.devName === this.state.leftDisplay;
               })
 
             result = result[0];
