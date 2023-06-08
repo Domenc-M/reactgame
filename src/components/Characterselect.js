@@ -12,7 +12,8 @@ class Characterselect extends React.Component {
           player1: null,
           player2: null,
           leftDisplay: null,
-          rightDisplay: null,    
+          rightDisplay: null,
+          currentSelect: 'player1'
         };
         this.characterList = [
             reimu,
@@ -28,23 +29,26 @@ class Characterselect extends React.Component {
                 leftDisplay: element.currentTarget.getAttribute('data')
             });
         }
+        else if(this.state.player2 == null)
+        {
+            this.setState({
+                rightDisplay: element.currentTarget.getAttribute('data')
+            })
+        }
     }
 
     selectChar = (element) => {
-        console.log(element);
         this.setState({
             player1: element.currentTarget.getAttribute('data')
         });
         if(this.props.opponent === "ai")
         {
-            console.log("no opponnent needed yet");
+            console.log("no opponent needed yet");
         }
 
     }
 
     leftSplash = (element) => {
-
-        let source;
         let output;
 
         if(this.state.leftDisplay == null)
@@ -55,6 +59,39 @@ class Characterselect extends React.Component {
         {
             let result = this.characterList.filter(obj => {
                 return obj.devName === this.state.leftDisplay;
+              })
+
+            result = result[0];
+            output = <div className="playerSplash">
+                <ul>
+                    <li className="charName">{result.name}</li>
+                    <li className="charDesc">{result.description}</li>
+                    <li className="charAbilities">
+                        <p>Abilities :</p>
+                        <p>-{result.abilityList[0]}</p>
+                        <p>-{result.abilityList[1]}</p>
+                        <p>-{result.abilityList[2]}</p>
+                        <p>-{result.abilityList[3]}</p>
+                    </li>
+                </ul>
+                <img alt="1st player" src={result.splashImage}></img>
+                </div>;
+        }
+
+        return(output);
+    }
+
+    rightSplash = (element) => {
+        let output;
+
+        if(this.state.rightDisplay == null)
+        {
+            output = <div></div>
+        }
+        else
+        {
+            let result = this.characterList.filter(obj => {
+                return obj.devName === this.state.rightDisplay;
               })
 
             result = result[0];
@@ -93,7 +130,7 @@ class Characterselect extends React.Component {
                 </div>
 
                 <div className="splashContainer">
-                    <img alt="2nd player"></img>
+                    {this.rightSplash()}
                 </div>
 
             </section>
