@@ -10,7 +10,9 @@ class Characterselect extends React.Component {
         super(props);
         this.state = {
           player1: null,
-          player2: null,    
+          player2: null,
+          leftDisplay: null,
+          rightDisplay: null,    
         };
         this.characterList = [
             reimu,
@@ -27,6 +29,11 @@ class Characterselect extends React.Component {
 
     selectChar = (element) => {
         console.log(element);
+        if(this.props.opponnent == "ai")
+        {
+            console.log("no opponnent needed yet");
+        }
+
     }
 
     leftSplash = (element) => {
@@ -35,7 +42,7 @@ class Characterselect extends React.Component {
 
         if(this.state.player1 === null)
         {
-            output = <div>coucou</div>
+            output = <div></div>
         }
         else
         {
@@ -64,7 +71,7 @@ class Characterselect extends React.Component {
     }
 
     render(){
-
+        console.log(this);
 
         return(
         <div>

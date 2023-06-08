@@ -39,7 +39,7 @@ class App extends React.Component {
     }
     else if (this.state.screen === 'select')
     {
-      display = <Characterselect />
+      display = <Characterselect opponent={this.state.opponent}/>
     }
     return (
       <div className="App">
