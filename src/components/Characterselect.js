@@ -23,6 +23,7 @@ class Characterselect extends React.Component {
     }
 
     hoverChar = (element) => {
+        console.log(this.state.player2);
         if(this.state.player1 == null)
         {
             this.setState({
@@ -38,12 +39,21 @@ class Characterselect extends React.Component {
     }
 
     selectChar = (element) => {
-        this.setState({
-            player1: element.currentTarget.getAttribute('data')
-        });
-        if(this.props.opponent === "ai")
+        if(this.state.player1 == null)
+        {
+            this.setState({
+                player1: element.currentTarget.getAttribute('data')
+            });
+        }
+        else if(this.props.opponent === "ai")
         {
             console.log("no opponent needed yet");
+        }
+        else if(this.props.opponent === 'player' && this.state.player2 == null)
+        {
+            this.setState({
+                player2: element.currentTarget.getAttribute('data')
+            });
         }
 
     }
@@ -115,8 +125,6 @@ class Characterselect extends React.Component {
     }
 
     render(){
-        console.log(this);
-
         return(
         <div>
             <section className="cs-display">
