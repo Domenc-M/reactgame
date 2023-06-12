@@ -23,7 +23,6 @@ class Characterselect extends React.Component {
     }
 
     hoverChar = (element) => {
-        console.log(this.state.player2);
         if(this.state.player1 == null)
         {
             this.setState({
