@@ -17,41 +17,6 @@ img{
             object-fit:contain;
         }
     }
-
-    .splashContainer{
-        height:100%;
-        width:40%;
-        position:relative;
-
-        .playerSplash{
-            img{
-                object-fit:contain;
-                height:100%;
-                position:absolute;
-                z-index:1;
-                left:-25%;
-            }
-            ul{
-                z-index:2;
-                position:absolute;
-                right:0;
-                height:90%;
-                width:50%;
-
-                .charName{
-                    font-size:3rem;
-                    color:var(--accent-light);
-                    text-align:center;
-                }
-
-                .charAbilities, .charDesc{
-                    color:var(--light);
-                    background-color:var(--main);
-                    border:2px solid var(--light);
-                }
-            }
-        }
-    }
 }
 
 .cs-l {

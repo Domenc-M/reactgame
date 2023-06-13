@@ -4,6 +4,7 @@ import laharl from '../characters/laharl';
 import '../scss/characterselect.scss';
 import React from 'react';
 import vs from '../assets/img/vs.png';
+import Splashart from './Splashart';
 
 class Characterselect extends React.Component {
     constructor(props) {
@@ -62,7 +63,7 @@ class Characterselect extends React.Component {
 
         if(this.state.leftDisplay == null)
         {
-            output = <div></div>
+            output = <></>
         }
         else
         {
@@ -71,20 +72,7 @@ class Characterselect extends React.Component {
               })
 
             result = result[0];
-            output = <div className="playerSplash">
-                <ul>
-                    <li className="charName">{result.name}</li>
-                    <li className="charDesc">{result.description}</li>
-                    <li className="charAbilities">
-                        <p>Abilities :</p>
-                        <p>-{result.abilityList[0]}</p>
-                        <p>-{result.abilityList[1]}</p>
-                        <p>-{result.abilityList[2]}</p>
-                        <p>-{result.abilityList[3]}</p>
-                    </li>
-                </ul>
-                <img alt="1st player" src={result.splashImage}></img>
-                </div>;
+            output = <Splashart character={result} text={1}/>
         }
 
         return(output);
@@ -104,20 +92,7 @@ class Characterselect extends React.Component {
               })
 
             result = result[0];
-            output = <div className="playerSplash">
-                <ul>
-                    <li className="charName">{result.name}</li>
-                    <li className="charDesc">{result.description}</li>
-                    <li className="charAbilities">
-                        <p>Abilities :</p>
-                        <p>-{result.abilityList[0]}</p>
-                        <p>-{result.abilityList[1]}</p>
-                        <p>-{result.abilityList[2]}</p>
-                        <p>-{result.abilityList[3]}</p>
-                    </li>
-                </ul>
-                <img alt="1st player" src={result.splashImage}></img>
-                </div>;
+            output = <Splashart character={result} text={1}/>
         }
 
         return(output);
