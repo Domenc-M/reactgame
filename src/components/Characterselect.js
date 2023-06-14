@@ -72,7 +72,7 @@ class Characterselect extends React.Component {
               })
 
             result = result[0];
-            output = <Splashart character={result} text={1}/>
+            output = <Splashart character={result} text={1} side={'left'}/>
         }
 
         return(output);
@@ -92,7 +92,7 @@ class Characterselect extends React.Component {
               })
 
             result = result[0];
-            output = <Splashart character={result} text={1}/>
+            output = <Splashart character={result} text={1} side={'right'}/>
         }
 
         return(output);
